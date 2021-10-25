@@ -33,6 +33,8 @@ function runGame(gameType) {
     //creates Two random numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
+    // Multiply num1 and num2 together for the division game. The equation will be divNum1 / num2 = num1.
+    let divNum1 = num1 * num2;
 
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
@@ -41,7 +43,7 @@ function runGame(gameType) {
     } else if (gameType === "subtract") {
         displaySubtractQuestion(num1, num2);
     } else if (gameType === "divison") {
-        displayDivisonQuestion(num1, num2);
+        displayDivisonQuestion(divNum1, num2);
     }
      else {
         alert(`unknown game-type: ${gameType}`);
